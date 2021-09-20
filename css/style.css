@@ -6,9 +6,14 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
 .contenitore {
     width: 80%;
-    margin: 0 auto;
+    margin: 20px auto;
 }
 
 .clearfix::after {
@@ -32,9 +37,12 @@
     position: relative;
 }
 
+/* CSS relativo alle due immagini sovrapposte */
+
 img {
     width: 100%;
-    height: fit-content;
+    height: 500px;
+    object-fit: cover;
 }
 
 img.seconda {
@@ -50,12 +58,30 @@ img.seconda {
     display: block;
 }
 
-.marca, .nome-prodotto, .prezzo {
-    /* debug */
-    height: 30px;
-    background-color: red;
-    border: solid 1px black;
+/* CSS relativo ai testi che si trovano sotto l'immagine */
+
+.marca {
+    color: grey;
 }
+
+.nome-prodotto {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.prezzo {
+    color: red;
+    font-weight: bold;
+}
+
+.prezzo span {
+    text-decoration: line-through;
+    color: grey;
+    font-weight: normal;
+    margin-left: 5px;
+}
+
+/* CSS relativo agli elementi posizionati in absolute, quindi il cuore e le info sconti e sostenibilità */
 
 .cuore {
     position: absolute;
@@ -69,18 +95,25 @@ img.seconda {
 
 .altre-info {
     position: absolute;
-    bottom: 120px;
+    bottom: 70px;
     left: 10px;
     z-index: 20;
-
-    /* debug */
-    background-color: yellow;
 }
 
 .sconto, .sostenibilita {
     float: left;
     margin-right: 5px;
+    color: white;
+    background-color: red;
+    font-weight: bold;
+    font-size: 12px;
+    padding: 3px;
+}
 
-    /* debug */
-    background-color: teal;
+.sostenibilita {
+    background-color: green;
+}
+
+.sostenibilita.no, .sconto.no {
+    display: none;
 }
