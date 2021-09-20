@@ -1,0 +1,98 @@
+/* Regole CSS generali */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contenitore {
+    width: 80%;
+    margin: 0 auto;
+
+    /* debug */
+    background-color: aquamarine;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* CSS relativo alle righe di prodotti */
+
+.riga-prodotti {
+    margin-bottom: 30px;
+}
+
+/* CSS relativo ai singoli prodotti e alle sue parti */
+
+.prodotto {
+    width: calc(100% / 3);
+    float: left;
+    padding: 0 10px;
+    position: relative;
+    
+    /* debug */
+    background-color: rgb(43, 127, 223);
+}
+
+img {
+    /* debug */
+    height: 400px;
+    width: 100%;
+    background-color: greenyellow;
+}
+
+img.seconda {
+    display: none;
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 10px;
+
+    /* debug */
+    height: 400px;
+    width: calc(100% - 20px);
+    background-color: thistle;
+}
+
+.prodotto:hover img.seconda {
+    display: block;
+}
+
+.marca, .nome-prodotto, .prezzo {
+    /* debug */
+    height: 30px;
+    background-color: red;
+    border: solid 1px black;
+}
+
+.cuore {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    padding: 3px 6px;
+    background-color: white;
+    font-size: 20px;
+    z-index: 20;
+}
+
+.altre-info {
+    position: absolute;
+    bottom: 120px;
+    left: 10px;
+    z-index: 20;
+
+    /* debug */
+    background-color: yellow;
+}
+
+.sconto, .sostenibilita {
+    float: left;
+    margin-right: 5px;
+
+    /* debug */
+    background-color: teal;
+}
