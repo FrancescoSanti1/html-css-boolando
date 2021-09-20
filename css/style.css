@@ -9,9 +9,6 @@
 .contenitore {
     width: 80%;
     margin: 0 auto;
-
-    /* debug */
-    background-color: aquamarine;
 }
 
 .clearfix::after {
@@ -33,16 +30,11 @@
     float: left;
     padding: 0 10px;
     position: relative;
-    
-    /* debug */
-    background-color: rgb(43, 127, 223);
 }
 
 img {
-    /* debug */
-    height: 400px;
     width: 100%;
-    background-color: greenyellow;
+    height: fit-content;
 }
 
 img.seconda {
@@ -51,11 +43,7 @@ img.seconda {
     position: absolute;
     top: 0;
     left: 10px;
-
-    /* debug */
-    height: 400px;
     width: calc(100% - 20px);
-    background-color: thistle;
 }
 
 .prodotto:hover img.seconda {
